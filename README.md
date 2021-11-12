@@ -39,3 +39,11 @@ This is not an officially supported Google product
 docker run -d --name websocket -p 80:80 registry.cn-hangzhou.aliyuncs.com/magictommy/websocket-echo
 wscat -c ws://${IP}/echo
 ```
+#kubernetes#
+```
+kubectl create deployment websoket --image=registry.cn-hangzhou.aliyuncs.com/magictommy/websocket-echo
+kubectl expose deployment websoket --port=80 --target-port=80
+kubectl create ingress websock --rule=websocket.52xiaojuzi.top/=websocket:80
+kubectl get ingress
+wscat -c ws://${IP}/echo
+```
