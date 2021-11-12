@@ -16,15 +16,15 @@ Please see [Wiki](https://github.com/GoogleChromeLabs/pywebsocket3/wiki) for mor
 
 To install this package to the system, run this:
 ```
-$ python setup.py build
-$ sudo python setup.py install
+$ python3 setup.py build
+$ sudo python3 setup.py install
 ```
 
 To install this package as a normal user, run this instead:
 
 ```
-$ python setup.py build
-$ python setup.py install --user
+$ python3 setup.py build
+$ python3 setup.py install --user
 ```
 # LAUNCH #
 
@@ -34,3 +34,8 @@ $ pydoc mod_pywebsocket.standalone
 ```
 # Disclaimer #
 This is not an officially supported Google product
+
+```
+docker run -d --name websocket -p 80:80 registry.cn-hangzhou.aliyuncs.com/magictommy/websocket-echo
+wscat -c ws://${IP}/echo
+```
