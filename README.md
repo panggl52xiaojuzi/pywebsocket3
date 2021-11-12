@@ -39,7 +39,7 @@ This is not an officially supported Google product
 docker run -d --name websocket -p 80:80 registry.cn-hangzhou.aliyuncs.com/magictommy/websocket-echo
 wscat -c ws://${IP}/echo
 ```
-#kubernetes#
+# kubernetes #
 ```
 kubectl create deployment websocket --image=registry.cn-hangzhou.aliyuncs.com/magictommy/websocket-echo
 kubectl expose deployment websocket --port=80 --target-port=80
